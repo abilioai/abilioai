@@ -2,7 +2,9 @@
 
 > *"Não quero decorar funções — quero entender problemas e transformá-los em soluções."*
 
-Sou estudante de Ciência da Computação (8º semestre, UniRitter) em transição ativa para Data Science. Meu foco é construir raciocínio analítico real — não seguir tutoriais, mas resolver problemas do zero e entender cada decisão que tomo.
+Sou estudante de Ciência da Computação (8º semestre, UniRitter) em transição ativa para Data Science e fundador da **[Abilio AI](https://abilioai.com.br)** — consultoria focada em transformar dados em decisões reais para negócios.
+
+Meu foco é construir raciocínio analítico real — não seguir tutoriais, mas resolver problemas do zero e entender cada decisão que tomo.
 
 Tenho especial atenção à **integridade dos dados**: nunca apresento uma taxa sem o volume que a sustenta, nunca confundo correlação com causalidade.
 
@@ -24,8 +26,31 @@ Tenho especial atenção à **integridade dos dados**: nunca apresento uma taxa 
 
 ---
 
-### 🏠 Previsão de Preços — House Prices *(em desenvolvimento)*
-> Regressão com feature engineering avançado · XGBoost · Análise de distribuições
+### 🏠 Previsão de Preços — House Prices
+> Regressão com Ridge · Feature engineering · Diagnóstico de resíduos
+
+- **Score público Kaggle:** 0.249 · **Top ~4k** no ranking global
+- **RMSE:** $24.588 (~15% da mediana do dataset)
+- Features criadas: `TotalArea`, `TotalBath`, `HouseAge`, `RemodAge`, `WasRemodeled`
+- Tratamento semântico de nulos: NaN como "não possui" vs NaN como zero
+- Transformação `log1p` no target + diagnóstico completo de resíduos
+
+[![Kaggle](https://img.shields.io/badge/Ver%20no%20Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/abilioai/house-prices-ridge)
+[![GitHub](https://img.shields.io/badge/Ver%20no%20GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/abilioai/house-price-ridge)
+
+---
+
+### 💳 Detecção de Fraude — Credit Card Fraud
+> Classificação binária · Dados desbalanceados · Decisão guiada por regra de negócio
+
+- **AUC-ROC:** 0.947 · **F1:** 0.87 · **Precision:** 93%
+- Dataset com desbalanceamento extremo: 0.17% de fraudes em 284k transações
+- Comparação de estratégias: `class_weight='balanced'` vs SMOTE
+- Ajuste de threshold (0.1 a 0.5) com análise do tradeoff Precision × Recall
+- Decisão final baseada em custo assimétrico dos erros — não apenas nas métricas
+
+[![Kaggle](https://img.shields.io/badge/Ver%20no%20Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/abilioai)
+[![GitHub](https://img.shields.io/badge/Ver%20no%20GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/abilioai/credit_card_fraud_detection)
 
 ---
 
@@ -53,16 +78,16 @@ Tenho especial atenção à **integridade dos dados**: nunca apresento uma taxa 
 
 ## 📈 Aprendendo agora
 
-- **Regressão avançada** — House Prices (Kaggle)
 - **XGBoost e LightGBM** — gradient boosting para dados tabulares
 - **Cross-validation** com StratifiedKFold
+- **SQL** — consultas analíticas e agregações
 
 ---
 
 ## ⚡ Sobre mim
 
 - 🎓 Ciência da Computação — UniRitter, 8º semestre
-- 🤖 Construindo a **[Abilio AI](https://abilioai.com.br)** — consultoria em dados e IA
+- 🤖 Fundador da **[Abilio AI](https://abilioai.com.br)** — consultoria em dados e IA
 - 🍣 Sushiman nas horas vagas
 - ☕ Movido a mocaccino
 - 🚀 Fascinado por astronomia e pelo impacto real da tecnologia
